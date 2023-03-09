@@ -1,13 +1,16 @@
-# My Python Program
-# Task:  use if statements to output the result of the game fizzbuzz.  
-# Start at 1
-# For multiples of 3, output   Fizz
-# For multiples of 5, output   Buzz
-# For multiples of 15, output   FizzBuzz
-# End at 32
-
 result = ""
-for myNumber in range(32):
-  result = str(result) + str(myNumber) + "\n"
+for myNumber in range(1,32):
+
+  if((myNumber % 3 == 0) and (myNumber % 15 != 0)):
+    print("Fizz")
+
+  if((myNumber % 5 == 0) and (myNumber % 15 !=0)):
+    print("Buzz")
+
+  if((myNumber % 15 == 0)):
+    print("FizzBuzz")
+
+  if((myNumber % 5 != 0) and (myNumber % 3 != 0)):
+    print(myNumber)
 
 print(result)
